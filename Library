@@ -1,0 +1,52 @@
+lst=["Hindi","english","math"]
+dict={}
+class Library:
+    def Dis(self):
+        print(lst)
+
+    def lend(self):
+        print("enter book name")
+        ik=input()
+        for i in lst:
+
+            if i==ik:
+               lst.remove(ik)
+               j=input("enter your name")
+               dict.update({ik: j})
+               print("successful")
+            else:
+                print("Not in the list")
+
+    def add(self):
+        lst.append(input("enter the book name"))
+
+    def rtrn(self):
+        book=input("enter book name")
+        lst.append(book)
+        dict.pop(book)
+
+
+while True:
+
+    print("\nchoose your option")
+    a=print("A=Display books")
+    b=print("B=lend books")
+    c=print("C=add books")
+    d=print("D=return books")
+    e=print("E for dict")
+    i=input()
+    s=Library()
+
+
+    if i=="a":
+        s.Dis()
+    elif i=="b":
+        s.lend()
+    elif i=="c":
+        s.add()
+    elif i=="d":
+        s.rtrn()
+    elif i=="e":
+        print(dict)
+    else :
+        print("wrong choice")

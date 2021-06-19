@@ -1,0 +1,38 @@
+import random
+print("enter your choice stone paper scissor ")
+
+lst = ["stone", "paper", "scissor"]
+
+com = 0
+plr = 0
+
+while com + plr != 5:
+    ch = (random.choices(lst, k=5))
+    l = input()
+    for i in ch:
+       if l == "stone" and i == "paper":
+           print("computer wins")
+           com = com+1
+           a = f"Computer's choice = {i}, computer score = {com} player score = {plr}"
+           print(a)
+       elif l == "stone" and i == "scissor":
+           print("player wins")
+           plr = plr + 1
+           a = f"Computer's choice = {i}, computer score = {com} player score = {plr}"
+           print(a)
+       elif l == "paper" and i == "scissor":
+           print("computer wins")
+           com = com+1
+           a = f"Computer's choice = {i}, computer score = {com} player score = {plr}"
+           print(a)
+       elif l == "paper" and i == "stone":
+           print("player wins")
+           plr = plr+1
+           a=f"Computer's choice = {i}, computer score = {com} player score = {plr}"
+           print(a)
+       else:
+           print("game tied")
+           a = f"Computer's choice = {i}, computer score = {com} player score = {plr}"
+       break
+if plr+ com ==5:
+    print("gamer over")

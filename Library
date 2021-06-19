@@ -14,8 +14,11 @@ class Library:
                j=input("enter your name")
                dict.update({ik: j})
                print("successful")
+               
+               break
+
             else:
-                print("Not in the list")
+             return "not in list"
 
     def add(self):
         lst.append(input("enter the book name"))
@@ -41,7 +44,8 @@ while True:
     if i=="a":
         s.Dis()
     elif i=="b":
-        s.lend()
+        print(s.lend())
+
     elif i=="c":
         s.add()
     elif i=="d":

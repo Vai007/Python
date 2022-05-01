@@ -7,22 +7,15 @@ j=[]
 r = requests.get('https://api.exchangerate-api.com/v4/latest/INR').json()
 
 def all_keys(dict_obj):
-    ''' This function generates all keys of
-        a nested dictionary.
-    '''
-    # Iterate over all keys of the dictionary
+    
+  
     for key , value in dict_obj.items():
         yield key
-        # If value is of dictionary type then yield all keys
-        # in that nested dictionary
         if isinstance(value, dict):
             for k in all_keys(value):
                 j.append(k)
-
-# Iterate over all keys of a nested dictionary
-# and print them one by one.
+                
 for key in all_keys(r):
-    #print(key)
     pass
 
 root=Tk()
